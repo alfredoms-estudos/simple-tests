@@ -1,0 +1,37 @@
+.mainMenu {
+    position: relative;
+    width: 100%;
+    height: 125px;
+    background-color: bisque;
+}
+
+.mainMenuItens {
+    position: absolute;
+    bottom: 0px;
+    margin: 16px 16px;
+}
+
+.mainMenuItens li {
+    margin-left: 15px;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.mainMenuItens a {
+    color: chocolate;
+    text-decoration: none;
+}
+
+.mainMenuItens a:hover {
+    color: coral;
+}
+
+.mainMenuItens a:focus {
+    color: indianred;
+}
+
+.mainMenuItens .activeItem {
+    color: indianred;
+}
