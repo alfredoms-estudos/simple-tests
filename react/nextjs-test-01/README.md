@@ -74,3 +74,28 @@
     }
 ```
 
+- Por padrão, o `NEXT.js` usa o `PostCSS` para compilar `CSS`. Para customizar a configuração do `PostCSS`, pode-se criar um arquivo `postcss.config.js` na raiz do projeto, tal como o exemplo a seguir:
+
+```javascript
+    module.exports = {
+        plugins: [
+            'tailwindcss',
+            ...(process.env.NODE_ENV === 'production'
+            ? [
+                [
+                    '@fullhuman/postcss-purgecss',
+                    {
+                    content: [
+                        './pages/**/*.{js,jsx,ts,tsx}',
+                        './components/**/*.{js,jsx,ts,tsx}'
+                    ],
+                    defaultExtractor: content =>
+                        content.match(/[\w-/:]+(?<!:)/g) || []
+                    }
+                ]
+                ]
+            : []),
+            'postcss-preset-env'
+        ]
+    }
+```
