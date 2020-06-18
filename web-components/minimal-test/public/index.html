@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple WebComponent</title>
+    <script src="http://localhost:3002/top-menu.js"></script>
+    <script src="http://localhost:3001/bundle.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const topMenu = document.getElementsByTagName('top-menu')[0];
+            topMenu.addItem({ text: 'newElement' });
+            topMenu.addItem({ text: 'novo teste' });
+        }, false);
+    </script>
+</head>
+<body>
+    <h1>Teste - WebComponents</h1>
+    <top-menu></top-menu>
+    <react-web-component></react-web-component>
+</body>
+</html>

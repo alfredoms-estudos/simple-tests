@@ -1,0 +1,16 @@
+{
+  "name": "webcomponents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently 'http-server ./public -p 3000' 'http-server ./src -p 3002'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "5.2.0",
+    "http-server": "0.12.3"
+  }
+}
