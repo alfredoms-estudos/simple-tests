@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "serve-public": "http-server -p 3000 ./public",
+    "start": "concurrently 'lerna run --scope @with-code-splitting/* --parallel start' 'npm run serve-public'",
+    "build": "lerna run --scope @with-code-splitting/* build",
+    "serve": "lerna run --scope @with-code-splitting/* --parallel serve",
+    "clean": "lerna run --scope @with-code-splitting/* --parallel clean"
+  },
+  "devDependencies": {
+    "concurrently": "5.2.0",
+    "http-server": "0.12.3",
+    "lerna": "^3.22.1"
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - WebComponents (com React e Code Splitting)</title>
+    <script src="http://localhost:3001/index.bundle.js"></script>
+    <script src="http://localhost:3003/detailsboard.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const topMenu = document.getElementsByTagName('top-menu')[0];
+            topMenu.addItem({ text: 'newElement' });
+            topMenu.addItem({ text: 'novo teste' });
+        }, false);
+    </script>
+</head>
+<body>
+    <h1>Teste - WebComponents (com React e Code Splitting)</h1>
+    Componente <strong>react-web-component</strong>:
+    <br /><br />
+    <react-web-component></react-web-component>
+</body>
+</html>
