@@ -4,29 +4,19 @@ import { SelectorComponent } from '../selector';
 import loadable from '@loadable/component';
 
 import HelpComponent from '../options/help';
-// System.config({
-//     baseURL: "http://172.19.17.232:3001"
-// });
-
-// System.config({
-//     paths: {
-//       'details-module': 'http://172.19.17.232:3001/details.bundle.js'
-//     }
-// });
 
 const DefaultComponent = () => <div>default content</div>;
+
+const simpleFunc = async (args) => {
+    const {default: asyncSimpleFunc } = await import('simplefunc/func');
+
+    return await asyncSimpleFunc(args);
+}
 
 const COMPONENTS_LIST = {
     'Default': DefaultComponent,
     'Help': HelpComponent,
     'Details': React.lazy(() => import('detailsboard/component'))
-    // 'Details': loadable(() => System.
-    // import('details-module'))
-//    'Help': lazy(() => import('../options/help')),
-    // 'Details': async () => await import('../options/details')
-    // 'Details': loadable(() => System.import('0.bundle.js'))
-    // 'Details': loadable(() => import('http://172.19.17.232:3001/0.bundle.js'))
-    // lazy(() => import('../options/details'))
 };
 
 export const ComponentHub = () => {
@@ -36,6 +26,10 @@ export const ComponentHub = () => {
     
     return (
         <div>
+            <button onClick={() => {
+                debugger;
+                simpleFunc('testset');
+            }}>Teste de Função Simples Lazy</button>
             <SelectorComponent setComponent={setComponent}></SelectorComponent>
             <React.Suspense fallback="Carregando ...">
                 <CurrentComponent></CurrentComponent>

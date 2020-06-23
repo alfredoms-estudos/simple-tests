@@ -23,7 +23,9 @@ module.exports = {
                 loader: "babel-loader",
                 exclude: /node_modules/,
                 options: {
-                  presets: ["@babel/preset-react"]
+                    presets: [
+                        "@babel/preset-react"
+                    ]
                 }
             }
         ],
@@ -37,6 +39,7 @@ module.exports = {
             library: { type: "var", name: "main" },
             remotes: {
               detailsboard: "detailsboard",
+              simplefunc: "simplefunc"
             },
             // shared: ["react", "react-dom"],
         }),
