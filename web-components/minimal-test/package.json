@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently 'http-server ./public -p 3000' 'http-server ./src -p 3002'"
+    "start": "concurrently 'http-server ./public -p 3000' 'http-server ./src -p 3001'"
   },
   "author": "",
   "license": "ISC",

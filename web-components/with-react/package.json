@@ -7,7 +7,7 @@
     "build": "webpack --mode production",
     "prebuild": "npm run clean",
     "clean": "rm -rfv build",
-    "start": "http-server ./dist -p 3001",
+    "start": "concurrently 'http-server ./public -p 3000' 'http-server ./dist -p 3001'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,6 +17,7 @@
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
+    "concurrently": "5.2.0",
     "http-server": "0.12.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
