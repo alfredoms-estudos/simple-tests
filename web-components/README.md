@@ -7,3 +7,5 @@
 ## Onde é usado?
 
 ## WebComponents com React
+
+## Estratégias de otimização
