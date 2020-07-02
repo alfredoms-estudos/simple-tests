@@ -5,7 +5,8 @@
     "start": "concurrently 'lerna run --scope @with-code-splitting/* --parallel start' 'npm run serve-public'",
     "build": "lerna run --scope @with-code-splitting/* build",
     "serve": "lerna run --scope @with-code-splitting/* --parallel serve",
-    "clean": "lerna run --scope @with-code-splitting/* --parallel clean"
+    "clean": "lerna run --scope @with-code-splitting/* --parallel clean",
+    "postinstall": "lerna bootstrap"
   },
   "devDependencies": {
     "concurrently": "5.2.0",
