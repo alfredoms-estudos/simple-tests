@@ -10,7 +10,11 @@ Em resumo, WebComponents é um conjunto de tecnologias que proporcionam a criaç
 
 * **ES Modules**: define como incluir e reutilizar documentos **Javascript** de uma forma padronizada, modular e performática;
 
-* **HTML Template**: Permite o desenvolvimento de templates de marcação, os quais não são exibidos durante o carregamento da página, mas são instanciados e renderizados em tempo de execução;
+* **HTML Template**: Permite o desenvolvimento de *templates de marcação*, os quais não são exibidos durante o carregamento da página, mas são instanciados e renderizados em tempo de execução;
+
+Referências: 
+* https://www.webcomponents.org/introduction
+* https://developer.mozilla.org/pt-BR/docs/Web/Web_Components
 
 
 ## Conceitos e uso
