@@ -23,7 +23,7 @@
     "bundle-loader": "0.5.6",
     "http-server": "0.12.3",
     "webpack": "5.0.0-beta.18",
-    "webpack-cli": "3.3.11",
+    "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
